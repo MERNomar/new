@@ -1,0 +1,115 @@
+html 
+{
+   font-family: 'Oswald', sans-serif;
+}
+body
+{
+   background-image: url(../img/background.png);
+   background-size: cover;
+
+}
+
+
+#savew
+{
+   margin: auto;
+   width: 30% ;
+   border-radius: 5px;
+   padding: 10px;
+   text-align: center;
+   color: rgb(0, 0, 0);
+   font-size: 30px;
+   text-shadow: 1px 1px violet ;
+}
+
+
+#header 
+{
+    margin: auto;
+  width: 30% ;
+  background-color:rgba(255, 16, 255, 0.349) ;
+  border-radius: 5px;
+  padding: 10px;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  font-size: 50px;
+}
+#tools
+{
+   margin-left: 1200px; 
+   margin-top: 200px;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   min-height: 500px; /*Changing from 250px -> 50px*/
+}
+
+
+#rock
+{
+   width: 100px;
+   background-color: rgba(0, 0, 0, 0.164);
+   border-radius: 5px;
+   box-shadow: 5px 5px pink;
+
+
+}
+#papper
+{
+   width: 100px; 
+   background-color: rgba(0, 0, 0, 0.164);
+   border-radius: 5px;
+   box-shadow: 5px 5px pink;
+
+
+
+}
+#scissors
+{
+   width: 100px; 
+   background-color: rgba(0, 0, 0, 0.164);
+   border-radius: 5px;
+   box-shadow: 5px 5px pink;
+
+}
+#scissors:hover , #papper:hover , #rock:hover
+
+{
+   width: 100px; 
+   background-color: rgba(27, 24, 24, 0.267);
+   border-radius: 5px;
+   box-shadow: 5px 5px rgb(226, 109, 129);
+   cursor: pointer;
+
+
+}
+
+.newgame
+{
+   margin: auto;
+   width: 15% ;
+   border-radius: 5px;
+   padding: 10px;
+   text-align: center;
+   color: rgb(0, 0, 0);
+   font-size: 70px;
+   text-shadow: 1px 1px violet ;
+   background-color: rgba(167, 111, 150, 0.384);
+
+    
+}
+.newgame:hover
+{
+   background-color: rgba(115, 56, 122, 0.308);
+   text-shadow: 1px 1px rgb(138, 10, 10) ;
+   cursor: pointer;
+
+
+}
+
+
+
+
+
+
+
