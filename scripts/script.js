@@ -2,33 +2,37 @@ const pcWin = "Computer wins";
 const humanWin = "Human wins";
 const tie = "Its a Tie !";
 let roundcounter =["One" , "Two" , "Three" , "four" , "Five"]
-const rock = document.querySelector(".rock")
-const papper = document.querySelector(".papper")
-const scissors = document.querySelector(".scissors")
+let buttons = document.querySelectorAll(".button");
+
+
+let choice = () =>
+
+{document.getElementById('tools').addEventListener('click', e => {
+  const choice = e.target.getAttribute('choice');
+  if (choice ) 
+    return choice
+})}
+
+
 
 const newgame = document.querySelector(".newgame")
 
-newgame.addEventListener('click', e => {  game()   })
-
-
-let nigger = "faggot";
+  
 let loseCounter = 0;
 let winCouneter = 0;
 let tieCounter = 0;
-
-
 const getComputerChoice = () => {
   let pc; 
   switch(Math.floor(Math.random() * 3) + 1)
 {
   case 1:
-    pc = "Rock";
+    pc = "rock";
     break;
   case 2:
-    pc = "Papper";
+    pc = "papper";
     break;
   case 3:
-    pc = "Scissors";
+    pc = "scissors";
     break;
 
 };
@@ -37,13 +41,12 @@ return pc;
 
 
 
+
+// here afor loop named play round takes two parameters player and pc 
+// waiting 2 parametrs player and pc and its detarmnate the winner 
 const playRound = (player , pc) => 
 {
  
-
-
-  player = player. toLowerCase();
-  pc = pc. toLowerCase();
  console.log(`You picked ${player}`)
  console.log(`Your Computer picked ${pc}`)
 
@@ -60,15 +63,24 @@ else if  (pc === "scissors" && player === "rock") {console.log(humanWin) , winCo
 else (console.log("man wtff ?"))}
 
 
-//here i made aloop thats call my playround function 5 times declare how is the winner !
-const game = () =>
-{
+//function that takes rock or paper or scissors insted of prompting it 
 
+
+
+
+
+
+//here i made aloop thats call my playround function 5 times declare how is the winner !
+/* const game = () =>
+{
+  
+ 
   for (let i = 0; i < 5; i++) {
+  let player = choice()
   let pc = getComputerChoice();
-  let player = prompt();
   playRound(player , pc);
   console.log(`round ${roundcounter[i]}`)
+  
 
     }  
  if (loseCounter > winCouneter && tieCounter){console.log("pc win killyourself")}
@@ -78,5 +90,22 @@ const game = () =>
 
 }
 
+game()*/
+function test(nigger)
+{
+if (nigger === 1){ console.log("one")}
+else if (nigger === 2){ console.log("two")}
+else if (nigger === 3){ console.log("three")}
+else {console.log("wtf")}
 
+}
+buttons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const img = button.querySelector("img");
+    playerSelection = img.alt.toLowerCase();
 
+    playRound(playerSelection, getComputerChoice());
+
+    
+  });
+});
