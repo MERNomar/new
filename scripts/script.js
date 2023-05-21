@@ -5,13 +5,7 @@ let roundcounter =["One" , "Two" , "Three" , "four" , "Five"]
 let buttons = document.querySelectorAll(".button");
 
 
-let choice = () =>
 
-{document.getElementById('tools').addEventListener('click', e => {
-  const choice = e.target.getAttribute('choice');
-  if (choice ) 
-    return choice
-})}
 
 
 
@@ -21,32 +15,23 @@ const newgame = document.querySelector(".newgame")
 let loseCounter = 0;
 let winCouneter = 0;
 let tieCounter = 0;
-const getComputerChoice = () => {
-  let pc; 
-  switch(Math.floor(Math.random() * 3) + 1)
-{
-  case 1:
-    pc = "rock";
-    break;
-  case 2:
-    pc = "papper";
-    break;
-  case 3:
-    pc = "scissors";
-    break;
 
-};
-return pc;
-}
 
 
 
 
 // here afor loop named play round takes two parameters player and pc 
 // waiting 2 parametrs player and pc and its detarmnate the winner 
-const playRound = (player , pc) => 
+const playRound = (player) => 
 {
- 
+  pcChocies = ["rock" , "papper" , "scissors" ]
+  
+  
+ let pcnum = Math.floor(Math.random() * pcChocies.length) 
+ let pc = pcChocies[pcnum]
+  
+    
+
  console.log(`You picked ${player}`)
  console.log(`Your Computer picked ${pc}`)
 
@@ -71,12 +56,16 @@ else (console.log("man wtff ?"))}
 
 
 //here i made aloop thats call my playround function 5 times declare how is the winner !
-/* const game = () =>
+ const game = () =>
 {
   
  
   for (let i = 0; i < 5; i++) {
-  let player = choice()
+
+   
+  
+  
+  let player = playerclicked;
   let pc = getComputerChoice();
   playRound(player , pc);
   console.log(`round ${roundcounter[i]}`)
@@ -90,12 +79,11 @@ else (console.log("man wtff ?"))}
 
 }
 
-game()*/
-function test(nigger)
+function test(A)
 {
-if (nigger === 1){ console.log("one")}
-else if (nigger === 2){ console.log("two")}
-else if (nigger === 3){ console.log("three")}
+if (A === 1){ console.log("one")}
+else if (A === 2){ console.log("two")}
+else if (A === 3){ console.log("three")}
 else {console.log("wtf")}
 
 }
@@ -109,3 +97,21 @@ buttons.forEach((button) => {
     
   });
 });
+
+
+
+// let form = document.querySelector(".form")
+// let playerinput = document.querySelector(".playerchoice")
+// let playerbtn = document.querySelector("#letsplay")
+// let playerclicked = playerbtn.addEventListener("click" , e => {e.preventDefault()
+//  playerinput.value
+// })
+
+
+
+
+
+
+
+
+playRound("rock")
