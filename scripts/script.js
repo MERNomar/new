@@ -1,5 +1,5 @@
-const pcWin = "Computer wins";
-const humanWin = "Human wins";
+const pcWin = "you lose";
+const humanWin = "you won";
 const tie = "Its a Tie !";
 let roundcounter =["One" , "Two" , "Three" , "four" , "Five"]
 let loseCounter = 0;
@@ -11,23 +11,53 @@ let displytie = document.querySelector(".tieCounter")
 let rock = "rock"
 let paper = "paper"
 let scissors = "scissors"
-let btns = document.querySelectorAll("[data-button]")
+let allScore = [displyLose , displyWin , displytie]
 
+
+
+function roundEnd(){ 
+ 
+   loseCounter = 0, winCouneter = 0 , tieCounter = 0
+  allScore.forEach( button => button.innerText = 0)
+ 
+}
+
+
+// win function
 function getWin(){
-  console.log(humanWin) 
-   winCouneter+= 1 
-   displyWin.innerText = `wins = ${winCouneter}`
+  if (winCouneter === 5){
+    alert("you won")
+    roundEnd()
+  }else{ console.log(humanWin) 
+    winCouneter+= 1 
+    displyWin.innerText = winCouneter
+    }
+ 
+
 
 }
+
+// lose function
 function getLose(){
-  console.log(pcWin) 
-  loseCounter+= 1 
-  displyLose.innerText = `loses = ${loseCounter}`
+  if (loseCounter === 5){
+    alert("you lost")
+    roundEnd()
+  }else{ console.log(pcWin) 
+    loseCounter+= 1 
+    displyLose.innerText = loseCounter}
+ 
 }
+
+// tie function
 function getTie() {
-  console.log(tie)
-   tieCounter+= 1 
-   displytie.innerText = `ties = ${tieCounter}`
+  if (tieCounter === 5){
+    alert("tie!")
+    roundEnd()
+  }else{ console.log(tie)
+    tieCounter+= 1 
+    displytie.innerText = tieCounter}
+ 
+  
 
 }
 
