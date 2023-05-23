@@ -1,11 +1,11 @@
-what i learnd 
-i learnd alot of stuff in that project iam really proud of making it !
+# what i learnd 
+# i learnd alot of stuff in that project iam really proud of making it !
 
 
-# alot of ways to use qurryselectors i think i need to study this more 
-# buttons.forEach((button) , let buttons = document.querySelectorAll(".button");
+- alot of ways to use qurryselectors i think i need to study this more 
+- buttons.forEach((button) , let buttons = document.querySelectorAll(".button");
 
-# arrow functions 
+- arrow functions 
 
 # how to write js codes over all like its the first serious js code i have evere written 
 
