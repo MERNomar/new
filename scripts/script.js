@@ -3,7 +3,7 @@ const humanWin = "you won";
 const tie = "Its a Tie !";
 let roundcounter =["One" , "Two" , "Three" , "four" , "Five"]
 let loseCounter = 0;
-let winCouneter = 0;
+let winCounter = 0;
 let tieCounter = 0;
 let displyWin = document.querySelector(".winCounter")
 let displyLose = document.querySelector(".loseCounter")
@@ -14,10 +14,10 @@ let scissors = "scissors"
 let allScore = [displyLose , displyWin , displytie]
 
 
-
+//round end 
 function roundEnd(){ 
  
-   loseCounter = 0, winCouneter = 0 , tieCounter = 0
+   loseCounter = 0, winCounter = 0 , tieCounter = 0
   allScore.forEach( button => button.innerText = 0)
  
 }
@@ -25,12 +25,12 @@ function roundEnd(){
 
 // win function
 function getWin(){
-  if (winCouneter === 5){
+  if (winCounter === 5){
     alert("you won")
     roundEnd()
   }else{ console.log(humanWin) 
-    winCouneter+= 1 
-    displyWin.innerText = winCouneter
+    winCounter+= 1 
+    displyWin.innerText = winCounter
     }
  
 
@@ -50,10 +50,8 @@ function getLose(){
 
 // tie function
 function getTie() {
-  if (tieCounter === 5){
-    alert("tie!")
-    roundEnd()
-  }else{ console.log(tie)
+
+ { console.log(tie)
     tieCounter+= 1 
     displytie.innerText = tieCounter}
  
@@ -61,11 +59,7 @@ function getTie() {
 
 }
 
-
-
-
-
-
+//play round take the two arguments and decides the winner 
 function playRound (player) 
 {  // here i got the pc choice 
   pcChocies = ["rock" , "paper" , "scissors" ]
