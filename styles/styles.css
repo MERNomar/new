@@ -1,13 +1,15 @@
 html 
 {
    font-family: 'Oswald', sans-serif;
+   color-scheme: dark;
+
 }
 body
 {
    background-image: url('../img/background.jpg'
    );
   background-size: cover;
-
+  height: 95vh;
 }
 
 
@@ -37,46 +39,28 @@ body
 }
 #tools
 {
-   margin-left: 1200px; 
-   margin-top: 200px;
+   margin: auto;
+   width: 90%;
+   margin-top: 50px;
    display: flex;
-   flex-direction: column;
+   flex-direction: row;
    justify-content: space-between;
    min-height: 500px; /*Changing from 250px -> 50px*/
 }
 
 
-#rock
+.rock,.paper,.scissors
 {
-   width: 100px;
+   height: 300px;
    background-color: rgba(0, 0, 0, 0.164);
    border-radius: 5px;
    box-shadow: 5px 5px rgb(66, 42, 46);
 
 
 }
-#papper
-{
-   width: 100px; 
-   background-color: rgba(0, 0, 0, 0.164);
-   border-radius: 5px;
-   box-shadow: 5px 5px rgb(66, 42, 46);
-
-
-
-}
-#scissors
-{
-   width: 100px; 
-   background-color: rgba(0, 0, 0, 0.164);
-   border-radius: 5px;
-   box-shadow: 5px 5px rgb(66, 42, 46);
-
-}
-#scissors:hover , #papper:hover , #rock:hover
+.scissors:hover , .paper:hover , .rock:hover
 
 {
-   width: 100px; 
    background-color: rgba(27, 24, 24, 0.267);
    border-radius: 5px;
    box-shadow: 5px 5px rgb(129, 35, 35);
@@ -85,8 +69,9 @@ body
 
 }
 
-.newgame
+.Counter
 {
+   display: inline;
    margin: auto;
    width: 15% ;
    border-radius: 5px;

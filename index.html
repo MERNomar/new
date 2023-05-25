@@ -11,25 +11,27 @@
   
 <h1 id="header">Rock , Paper , scissors</h1>
 <h2 id="savew"> the dark lord is coming !</h2>
-<h2  class="newgame" > Start now </h2>
-
-<img src="" alt="">
+<h2 id="savew" class="judgment"> Make your choice !</h2>
 
 
+<div style="display: flex; ">
+<h2  class="Counter" >Wins: <span class="winCounter" >0</span></h2>
+<h2  class="Counter" >Loses: <span class="loseCounter" >0</span></h2>
+</div>
 
-<div class="rock" onclick="playRound(rock)">rock</div>
-<div class="paper" onclick="playRound(paper)">paper</div>
-<div class="scissors" onclick="playRound(scissors)">scissors</div>
+
+<div id="tools">
+<img src="./img/paper.png" alt="" class="paper" onclick="playRound(paper)">
+<img src="./img/rock.png" class="rock" onclick="playRound(rock)" alt="">
+<img src="./img/scissors.png" alt="" class="scissors" onclick="playRound(scissors)">
+</div>
 
 
-<div>wins =<p data-score class="winCounter"> 0 </p></div>
-<div>loses =<p data-score class="loseCounter">0</p></div>
-<div> ties =<p data-score class="tieCounter">0</p></div>
+
 
 
 
 <script defer src="./scripts/script.js" > </script>
-
 
 </body>
 </html>

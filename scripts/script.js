@@ -1,7 +1,6 @@
 const pcWin = "you lose";
 const humanWin = "you won";
 const tie = "Its a Tie !";
-let roundcounter =["One" , "Two" , "Three" , "four" , "Five"]
 let loseCounter = 0;
 let winCounter = 0;
 let tieCounter = 0;
@@ -12,16 +11,16 @@ let rock = "rock"
 let paper = "paper"
 let scissors = "scissors"
 let allScore = [displyLose , displyWin , displytie]
+let Judgment = document.querySelector(".judgment")
 
 
 //round end 
 function roundEnd(){ 
  
    loseCounter = 0, winCounter = 0 , tieCounter = 0
-  allScore.forEach( button => button.innerText = 0)
+  allScore.forEach( score => score.innerText = 0)
  
 }
-
 
 // win function
 function getWin(){
@@ -53,10 +52,7 @@ function getTie() {
 
  { console.log(tie)
     tieCounter+= 1 
-    displytie.innerText = tieCounter}
- 
-  
-
+    }
 }
 
 //play round take the two arguments and decides the winner 
@@ -65,8 +61,7 @@ function playRound (player)
   pcChocies = ["rock" , "paper" , "scissors" ]
  let pcnum = Math.floor(Math.random() * pcChocies.length) 
  let pc = pcChocies[pcnum]
- console.log(`You picked ${player}`)
- console.log(`Your Computer picked ${pc}`)
+ Judgment.innerText = `You picked ${player} Darklord picked ${pc}`
 //tie condition
 if ( player === pc ) {getTie()}
 //lose condition
@@ -77,15 +72,7 @@ else if  (player === "scissors" && pc === "rock") {getLose()}
 else if  (pc === "rock" && player === "paper") {getWin() }
 else if  (pc === "paper" && player === "scissors") {getWin()}
 else if  (pc === "scissors" && player === "rock") {getWin()}
-
-
-else (console.log("man wtff ?"))} 
-
-
-
-
-
-
+} 
 
 
 
