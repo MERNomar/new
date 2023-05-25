@@ -1,5 +1,5 @@
-const pcWin = "you lose";
-const humanWin = "you won";
+const pcWin = "You Lose !";
+const humanWin = "You Won !";
 const tie = "Its a Tie !";
 let loseCounter = 0;
 let winCounter = 0;
@@ -12,6 +12,8 @@ let paper = "paper"
 let scissors = "scissors"
 let allScore = [displyLose , displyWin , displytie]
 let Judgment = document.querySelector(".judgment")
+let gameState = document.querySelector(".gameState")
+
 
 
 //round end 
@@ -24,10 +26,10 @@ function roundEnd(){
 
 // win function
 function getWin(){
-  if (winCounter === 5){
+  if (winCounter === 4){
     alert("you won")
     roundEnd()
-  }else{ console.log(humanWin) 
+  }else{  gameState.innerHTML = humanWin 
     winCounter+= 1 
     displyWin.innerText = winCounter
     }
@@ -38,10 +40,10 @@ function getWin(){
 
 // lose function
 function getLose(){
-  if (loseCounter === 5){
+  if (loseCounter === 4){
     alert("you lost")
     roundEnd()
-  }else{ console.log(pcWin) 
+  }else{ gameState.innerHTML = pcWin 
     loseCounter+= 1 
     displyLose.innerText = loseCounter}
  
@@ -50,7 +52,7 @@ function getLose(){
 // tie function
 function getTie() {
 
- { console.log(tie)
+ {  gameState.innerHTML = tie 
     tieCounter+= 1 
     }
 }
