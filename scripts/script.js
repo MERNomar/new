@@ -13,7 +13,10 @@ let scissors = "scissors"
 let allScore = [displyLose , displyWin , displytie]
 let Judgment = document.querySelector(".judgment")
 let gameState = document.querySelector(".gameState")
-
+let playAgin = document.querySelectorAll(".playAgin")
+let caseLoseModal = document.querySelector(".theModalCaseLose")
+let caseWinModal = document.querySelector(".theModalCaseWin")
+let blurBackground = document.querySelector(".blurBackground")
 
 
 //round end 
@@ -76,6 +79,10 @@ else if  (pc === "paper" && player === "scissors") {getWin()}
 else if  (pc === "scissors" && player === "rock") {getWin()}
 } 
 
+playAgin.forEach(button => button.addEventListener("click" ,e=>{
+  blurBackground.style.display = "none" }))
 
-
-
+function showTheModal()
+{
+  blurBackground.style.display = "block"
+}
