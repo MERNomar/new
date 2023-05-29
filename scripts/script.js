@@ -3,14 +3,12 @@ const humanWin = "You Won !";
 const tie = "Its a Tie !";
 let loseCounter = 0;
 let winCounter = 0;
-let tieCounter = 0;
 let displyWin = document.querySelector(".winCounter")
 let displyLose = document.querySelector(".loseCounter")
-let displytie = document.querySelector(".tieCounter")
 let rock = "rock"
 let paper = "paper"
 let scissors = "scissors"
-let allScore = [displyLose , displyWin , displytie]
+let allScore = [displyLose , displyWin ]
 let Judgment = document.querySelector(".judgment")
 let gameState = document.querySelector(".gameState")
 let playAgin = document.querySelectorAll(".playAgin")
@@ -30,8 +28,8 @@ function roundEnd(){
 // win function
 function getWin(){
   if (winCounter === 4){
-    alert("you won")
     roundEnd()
+    showTheModalWin()
   }else{  gameState.innerHTML = humanWin 
     winCounter+= 1 
     displyWin.innerText = winCounter
@@ -44,8 +42,8 @@ function getWin(){
 // lose function
 function getLose(){
   if (loseCounter === 4){
-    alert("you lost")
     roundEnd()
+    showTheModalLose()
   }else{ gameState.innerHTML = pcWin 
     loseCounter+= 1 
     displyLose.innerText = loseCounter}
@@ -56,8 +54,7 @@ function getLose(){
 function getTie() {
 
  {  gameState.innerHTML = tie 
-    tieCounter+= 1 
-    }
+ }
 }
 
 //play round take the two arguments and decides the winner 
@@ -80,9 +77,21 @@ else if  (pc === "scissors" && player === "rock") {getWin()}
 } 
 
 playAgin.forEach(button => button.addEventListener("click" ,e=>{
-  blurBackground.style.display = "none" }))
+  blurBackground.style.display = "none"
+  caseWinModal.style.display = "none"
+  caseLoseModal.style.display = "none"
 
-function showTheModal()
+
+ }))
+
+function showTheModalWin()
 {
+  caseWinModal.style.display = "block"
   blurBackground.style.display = "block"
 }
+function showTheModalLose()
+{
+  caseLoseModal.style.display = "block"
+  blurBackground.style.display = "block"
+}
+
